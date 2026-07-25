@@ -1,3 +1,64 @@
 [gd_scene format=3 uid="uid://cd6x548ikuhdy"]
 
+[ext_resource type="Script" uid="uid://d1xh0f2sp2kn5" path="res://timer_screen.gd" id="1_3mivm"]
+[ext_resource type="Texture2D" uid="uid://caubnet0fxipm" path="res://thumb-1920-1305909.jpeg" id="2_lwxgr"]
+[ext_resource type="Texture2D" uid="uid://cda5dxsuxf1a5" path="res://Wario_Head.webp" id="3_8wodn"]
+
 [node name="Level Scene" type="Node2D" unique_id=1842645710]
+script = ExtResource("1_3mivm")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=816100362]
+offset_left = 4.0000076
+offset_top = 5.0
+offset_right = 1924.0
+offset_bottom = 1085.0
+scale = Vector2(0.6037908, 0.5935369)
+texture = ExtResource("2_lwxgr")
+
+[node name="Wario_Container" type="HBoxContainer" parent="TextureRect" unique_id=297344836]
+layout_mode = 0
+offset_left = 457.11194
+offset_top = 342.01746
+offset_right = 2503.1118
+offset_bottom = 711.0175
+scale = Vector2(0.54810005, 0.5474006)
+
+[node name="Wario" type="TextureRect" parent="TextureRect/Wario_Container" unique_id=1743368506]
+layout_mode = 2
+texture = ExtResource("3_8wodn")
+
+[node name="Wario2" type="TextureRect" parent="TextureRect/Wario_Container" unique_id=1027726667]
+layout_mode = 2
+texture = ExtResource("3_8wodn")
+
+[node name="Wario3" type="TextureRect" parent="TextureRect/Wario_Container" unique_id=1041195135]
+layout_mode = 2
+texture = ExtResource("3_8wodn")
+
+[node name="Wario4" type="TextureRect" parent="TextureRect/Wario_Container" unique_id=516040227]
+layout_mode = 2
+texture = ExtResource("3_8wodn")
+
+[node name="Wario5" type="TextureRect" parent="TextureRect/Wario_Container" unique_id=636088261]
+layout_mode = 2
+texture = ExtResource("3_8wodn")
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=760731649]
+offset_left = 521.0
+offset_top = 360.00003
+offset_right = 707.7068
+offset_bottom = 407.07486
+scale = Vector2(1.3947403, 1.4850191)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "Level: #"
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=520630627]
+offset_left = 626.0
+offset_top = 502.00003
+offset_right = 698.6874
+offset_bottom = 549.0748
+scale = Vector2(1.150585, 1.3563517)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"
