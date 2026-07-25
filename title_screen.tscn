@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://btg117njqy6w6"]
+
+[ext_resource type="Script" uid="uid://gopx34wq43x8" path="res://title_screen.gd" id="1_ak2if"]
+[ext_resource type="Texture2D" uid="uid://caubnet0fxipm" path="res://thumb-1920-1305909.jpeg" id="1_v6p8y"]
+
+[node name="Title Screen" type="Node2D" unique_id=1720414267]
+script = ExtResource("1_ak2if")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1734477227]
+offset_right = 1920.0
+offset_bottom = 1080.0
+scale = Vector2(0.598023, 0.60192025)
+texture = ExtResource("1_v6p8y")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=484518838]
+clip_contents = false
+offset_left = 115.0
+offset_top = 101.99999
+offset_right = 734.788
+offset_bottom = 236.59778
+scale = Vector2(1.5880332, 1.040936)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "WarioWare"
+scroll_active = false
+
+[node name="VSplitContainer" type="VSplitContainer" parent="." unique_id=602595131]
+offset_left = 441.0
+offset_top = 321.0
+offset_right = 691.0
+offset_bottom = 438.0
+scale = Vector2(1.4527467, 1.8482862)
+split_offsets = PackedInt32Array(0, 0)
+
+[node name="Start" type="Button" parent="VSplitContainer" unique_id=720280600]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+text = "Start Game
+"
+
+[node name="Settings" type="Button" parent="VSplitContainer" unique_id=1322169268]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+text = "Settings
+
+"
+
+[node name="Quit" type="Button" parent="VSplitContainer" unique_id=1008570815]
+layout_mode = 2
+theme_override_constants/outline_size = 10
+text = "Quit
+
+"
+
+[connection signal="pressed" from="VSplitContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VSplitContainer/Quit" to="." method="_on_quit_pressed"]
