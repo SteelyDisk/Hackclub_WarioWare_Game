@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ckudr8chj1kgo"]
+
+[ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://bg23vm8geqoly" path="res://Wario_SSF2.png" id="2_i3pqv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_82ft8"]
+radius = 85.47514
+
+[node name="Player" type="CharacterBody2D" unique_id=329479015]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=731345892]
+texture = ExtResource("2_i3pqv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2113695728]
+shape = SubResource("CircleShape2D_82ft8")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=534446657]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=691614882]
+shape = SubResource("CircleShape2D_82ft8")
