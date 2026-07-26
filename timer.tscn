@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://tvufrtga5xbv"]
+
+[node name="Timer" type="RichTextLabel" unique_id=380583825]
+offset_left = 570.0
+offset_top = 502.0
+offset_right = 645.8493
+offset_bottom = 557.2954
+scale = Vector2(1.7666608, 1.7205905)
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"
+scroll_active = false
