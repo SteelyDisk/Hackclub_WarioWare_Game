@@ -141,3 +141,8 @@ shape = SubResource("CircleShape2D_82ft8")
 [node name="ThemedTimer" type="Timer" parent="." unique_id=783724296]
 
 [node name="Timer" parent="." unique_id=380583825 instance=ExtResource("5_wh6qq")]
+offset_left = 932.0
+offset_top = 35.00003
+offset_right = 1007.8493
+offset_bottom = 90.29544
+text = "10.0"

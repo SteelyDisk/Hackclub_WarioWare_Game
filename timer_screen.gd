@@ -12,6 +12,7 @@ var time
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Global.minigames_done = 0
 	await Timer(0.5)
 	
 	if Global.minigames_done < 3: # if you havent completed 3 minigames yet 
