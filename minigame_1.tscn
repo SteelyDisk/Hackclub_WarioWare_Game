@@ -146,3 +146,5 @@ offset_top = 35.00003
 offset_right = 1007.8493
 offset_bottom = 90.29544
 text = "10.0"
+
+[connection signal="garlic_collected" from="Garlic" to="." method="_on_garlic_garlic_collected"]

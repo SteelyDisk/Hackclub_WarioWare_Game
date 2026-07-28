@@ -17,11 +17,14 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+		
 	if garlic_collected == 1:
+		Global.minigames_done += 1
+		
 		if Global.minigames_done > 3:
 			get_tree().change_scne_to_file("res://scenes/done_screen.tscn")
 		else:
-			get_tree().change_scene_to_file("res://scenes/timer_screen.tscn")
+			get_tree().change_scene_to_file("res://minigame_2.tscn")
 	
 	if timer_end:
 		Global.minigames_done -= 1 #go back a minigame
@@ -30,9 +33,7 @@ func _process(_delta: float) -> void:
 	
 	timer.text = str(time)
 
-func garlic_collect() -> void:
-	garlic_collected = garlic_collected +1
-	return
+
 
 
 
@@ -49,3 +50,8 @@ func Timer(_start_time: float):
 
 func wait (seconds: float):
 	await get_tree().create_timer(seconds).timeout #makes you wait
+
+
+func _on_garlic_garlic_collected() -> void:
+	garlic_collected = garlic_collected +1
+	return
