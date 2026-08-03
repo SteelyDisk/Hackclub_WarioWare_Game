@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://c7x4d3dlg3hsh"]
 
+[ext_resource type="Script" uid="uid://2ls85e8tkkry" path="res://minigame_3.gd" id="1_33dbb"]
 [ext_resource type="Texture2D" uid="uid://r5067d7nvryb" path="res://rock_paper_scissors_sprite-Photoroom.png" id="2_33dbb"]
 [ext_resource type="Script" uid="uid://dxqd1fbqx5c3c" path="res://hand.gd" id="2_gqi5c"]
+[ext_resource type="Script" uid="uid://boma1lliv3bbr" path="res://enemy.gd" id="3_5xr8p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1i1uu"]
 atlas = ExtResource("2_33dbb")
@@ -43,6 +45,7 @@ animations = [{
 }]
 
 [node name="Minigame 3" type="Node2D" unique_id=396388436]
+script = ExtResource("1_33dbb")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=472686300]
 offset_left = -31.0
@@ -81,3 +84,11 @@ scale = Vector2(2.109756, 2.3446603)
 sprite_frames = SubResource("SpriteFrames_82ft8")
 animation = &"Move_0"
 script = ExtResource("2_gqi5c")
+
+[node name="Enemy" type="AnimatedSprite2D" parent="." unique_id=1335967181]
+position = Vector2(889, 354.99997)
+rotation = 1.5754166
+scale = Vector2(2.109756, 2.3446603)
+sprite_frames = SubResource("SpriteFrames_82ft8")
+animation = &"Move_0"
+script = ExtResource("3_5xr8p")
