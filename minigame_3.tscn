@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://c7x4d3dlg3hsh"]
+
+[ext_resource type="Texture2D" uid="uid://r5067d7nvryb" path="res://rock_paper_scissors_sprite-Photoroom.png" id="2_33dbb"]
+[ext_resource type="Script" uid="uid://dxqd1fbqx5c3c" path="res://hand.gd" id="2_gqi5c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1i1uu"]
+atlas = ExtResource("2_33dbb")
+region = Rect2(0, 0, 82, 103)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0abbc"]
+atlas = ExtResource("2_33dbb")
+region = Rect2(164, 0, 82, 103)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elj0y"]
+atlas = ExtResource("2_33dbb")
+region = Rect2(82, 0, 82, 103)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_82ft8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1i1uu")
+}],
+"loop": 1,
+"name": &"Move_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0abbc")
+}],
+"loop": 1,
+"name": &"Move_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elj0y")
+}],
+"loop": 1,
+"name": &"Move_2",
+"speed": 5.0
+}]
+
+[node name="Minigame 3" type="Node2D" unique_id=396388436]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=472686300]
+offset_left = -31.0
+offset_top = 592.0
+offset_right = 1239.0
+offset_bottom = 707.0
+color = Color(0.40784314, 0.56078434, 0.59607846, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1761546818]
+offset_left = 3.9999962
+offset_top = -44.0
+offset_right = 1259.0
+offset_bottom = 99.0
+rotation = 1.5772917
+color = Color(0.40784314, 0.56078434, 0.59607846, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1793801862]
+offset_left = 1299.0
+offset_top = -6.0
+offset_right = 2554.0
+offset_bottom = 137.0
+rotation = 1.5772917
+color = Color(0.40784314, 0.56078434, 0.59607846, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=461029906]
+offset_left = -43.0
+offset_top = -65.0
+offset_right = 1227.0
+offset_bottom = 50.0
+color = Color(0.4074783, 0.5588529, 0.5949053, 1)
+
+[node name="Hand" type="AnimatedSprite2D" parent="." unique_id=401127998]
+position = Vector2(188.00002, 361.00003)
+rotation = 1.5754166
+scale = Vector2(2.109756, 2.3446603)
+sprite_frames = SubResource("SpriteFrames_82ft8")
+animation = &"Move_0"
+script = ExtResource("2_gqi5c")

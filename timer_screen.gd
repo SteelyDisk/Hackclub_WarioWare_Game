@@ -12,7 +12,6 @@ var time
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Global.minigames_done = 0
 	await Timer(0.5)
 	
 	if Global.minigames_done < 3: # if you havent completed 3 minigames yet 
@@ -45,7 +44,7 @@ func _process(_delta: float) -> void:
 			wario_container.hide() #hides all of the Wario's
 			
 	timer.text = str(time) # make ths text reflect the value of the time variable. this makes names easier. the str() converts the int to a String
-	level.text = "Level " + str(Global.minigames_done) # this tells you want minigame you're on using concatenation (google the word yo)
+	level.text = "Level " + str(Global.minigames_done + 1) # this tells you want minigame you're on using concatenation (google the word yo)
 	
 func Timer(_start_time: float):
 	

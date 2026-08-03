@@ -12,12 +12,12 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if buttons_pressed == 4:
 		if Global.minigames_done > 3:
 			get_tree().change_scene_to_file("res://scenes/done_screen.tscn")
 		else:
-			get_tree().change_scene_to_file("res://scenes/timer_screen.tscn")
+			get_tree().change_scene_to_file("res://level_scene.tscn")
 	
 	if timer_end:
 		Global.lives -= 1
