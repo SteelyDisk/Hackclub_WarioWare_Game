@@ -27,22 +27,16 @@ scroll_active = false
 [node name="VSplitContainer" type="VSplitContainer" parent="." unique_id=602595131]
 offset_left = 441.0
 offset_top = 321.0
-offset_right = 691.0
-offset_bottom = 438.0
+offset_right = 663.3374
+offset_bottom = 395.0
 scale = Vector2(1.4527467, 1.8482862)
-split_offsets = PackedInt32Array(0, 0)
+split_offsets = PackedInt32Array(31)
+split_offset = 31
 
 [node name="Start" type="Button" parent="VSplitContainer" unique_id=720280600]
 layout_mode = 2
 theme_override_constants/outline_size = 10
 text = "Start Game
-"
-
-[node name="Settings" type="Button" parent="VSplitContainer" unique_id=1322169268]
-layout_mode = 2
-theme_override_constants/outline_size = 10
-text = "Settings
-
 "
 
 [node name="Quit" type="Button" parent="VSplitContainer" unique_id=1008570815]

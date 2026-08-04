@@ -25,7 +25,7 @@ func animation_loop(): #loops through each hand sprite
 		var moves: Array[int] = [0, 1, 2]
 		for move in moves:
 			
-			await wait(0.2) #wauts a for a bit so the loop doesn't move too fast
+			await wait(0.7) #waits a for a bit so the loop doesn't move too fast
 			animated_sprite.play("Move_" + str(move))
 			
 			if stp == true:

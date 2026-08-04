@@ -138,6 +138,48 @@ libraries/ = SubResource("AnimationLibrary_or1ld")
 position = Vector2(848, 570)
 shape = SubResource("CircleShape2D_82ft8")
 
+[node name="Garlic2" type="Node2D" parent="." unique_id=828606993]
+script = ExtResource("4_or1ld")
+
+[node name="Garlic" type="TextureRect" parent="Garlic2" unique_id=388864316]
+offset_left = 207.00003
+offset_top = 236.0
+offset_right = 607.03125
+offset_bottom = 700.0
+scale = Vector2(0.13048096, 0.11867459)
+texture = ExtResource("3_0hvi2")
+
+[node name="Animation" type="AnimationPlayer" parent="Garlic2" unique_id=2007867327]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_or1ld")
+
+[node name="Area2D" type="Area2D" parent="Garlic2" unique_id=691947890]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic2/Area2D" unique_id=1947619920]
+position = Vector2(230, 270)
+shape = SubResource("CircleShape2D_82ft8")
+
+[node name="Garlic3" type="Node2D" parent="." unique_id=1085623031]
+script = ExtResource("4_or1ld")
+
+[node name="Garlic" type="TextureRect" parent="Garlic3" unique_id=84694199]
+offset_left = 699.0
+offset_top = 439.0
+offset_right = 1099.0313
+offset_bottom = 903.0
+scale = Vector2(0.13048096, 0.11867459)
+texture = ExtResource("3_0hvi2")
+
+[node name="Animation" type="AnimationPlayer" parent="Garlic3" unique_id=717704937]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_or1ld")
+
+[node name="Area2D" type="Area2D" parent="Garlic3" unique_id=1123939990]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Garlic3/Area2D" unique_id=418389945]
+position = Vector2(720, 472)
+shape = SubResource("CircleShape2D_82ft8")
+
 [node name="ThemedTimer" type="Timer" parent="." unique_id=783724296]
 
 [node name="Timer" parent="." unique_id=380583825 instance=ExtResource("5_wh6qq")]
@@ -148,3 +190,5 @@ offset_bottom = 90.29544
 text = "10.0"
 
 [connection signal="garlic_collected" from="Garlic" to="." method="_on_garlic_garlic_collected"]
+[connection signal="garlic_collected" from="Garlic2" to="." method="_on_garlic_garlic_collected"]
+[connection signal="garlic_collected" from="Garlic3" to="." method="_on_garlic_garlic_collected"]

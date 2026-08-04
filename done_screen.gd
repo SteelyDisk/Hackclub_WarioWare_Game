@@ -1,16 +1,15 @@
-extends TextureButton
-@onready var parent = $".."
+extends Node2D
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	await wait(5.0)
+	get_tree().change_scene_to_file("res://title_screen.tscn")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
-
-
-func _on_pressed() -> void:
-	hide()
-	parent.buttons_pressed += 1
+	
+func wait (seconds: float):
+	await get_tree().create_timer(seconds).timeout #makes you wait
